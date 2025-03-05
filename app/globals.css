@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 20% 11%;
+    --foreground: 0 0% 100%;
+    --card: 240 25% 14%;
+    --card-foreground: 0 0% 100%;
+    --card-bg: 240 25% 14%;
+    --popover: 240 25% 14%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 260 100% 64%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 260 100% 70%;
+    --secondary: 240 20% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 20% 20%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 240 20% 20%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 20% 20%;
+    --input: 240 20% 20%;
+    --ring: 260 100% 64%;
+    --radius: 0.5rem;
+    --stats-bg: 240 40% 8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .stats-bar {
+    @apply py-2 bg-stats-bg text-sm overflow-x-auto whitespace-nowrap;
+  }
+
+  .nav-link {
+    @apply px-4 py-2 font-medium text-white hover:text-primary-light transition-colors;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-primary hover:bg-primary-light text-white rounded-md transition-colors font-medium;
+  }
+
+  .btn-outline {
+    @apply px-4 py-2 border border-primary text-primary hover:bg-primary/10 rounded-md transition-colors font-medium;
+  }
+
+  .vote-btn {
+    @apply px-4 py-1 bg-primary hover:bg-primary-light text-white rounded-md transition-colors text-sm font-medium;
+  }
+
+  .news-card {
+    @apply bg-card-bg rounded-lg overflow-hidden hover:ring-1 hover:ring-primary transition-all duration-200;
+  }
+
+  .badge {
+    @apply px-2 py-0.5 text-xs font-medium rounded;
+  }
+}
+
